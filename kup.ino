@@ -31,8 +31,8 @@ const int WELCOME = 0;
 const int TAKEMONEY = 1;
 const int FILL_CLIENT = 3;
 const int SERVICE_FILLING = 4;
-const int L2duration =10000;//filling duration/sec
-const int L4duration = 15000;//filling duration/sec
+const int L2duration =30000;//filling duration/sec
+const int L4duration =30000;//filling duration/sec-3 min
 //====== input section ========
 const int RDYBTNPIN = 4;//input pin btn- (when pipe in client)
 const int L2 = 2;
@@ -198,7 +198,7 @@ void fillClientTank(){
       Serial.println("filling 2 Litres...");
     #endif
      
-     delay(L2duration);
+     delay(L2duration);//L2duration
      setPin(PUMP2L_RELAY,HIGH);//pump off
      lcd.clear();
      lcd.setCursor(0, 1);
